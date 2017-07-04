@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uun-1w-UUm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cool Cats-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoolCats" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5YA-B7-7a3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="514"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ojl-ZH-hAh" appends="YES" id="BIQ-0G-7yh"/>
+                                    <outletCollection property="gestureRecognizers" destination="Jt8-tU-FlO" appends="YES" id="wPR-4y-o4y"/>
+                                </connections>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="7do-pz-wEr">
+                                <rect key="frame" x="32" y="602" width="310" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euj-yr-PoA">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="TWo-MD-ndk"/>
+                                        </constraints>
+                                        <state key="normal" title="&lt;" image="Untitled">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="previousCatTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="19X-Js-6lV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="783-hr-Fhg">
+                                        <rect key="frame" x="80" y="0.0" width="150" height="45"/>
+                                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="cgV-dI-2yO"/>
+                                        </constraints>
+                                        <state key="normal" title="That's One Cool Cat">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ygx-7I-Bg9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AD-RX-2A6">
+                                        <rect key="frame" x="265" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="Jb1-Jb-Gqc"/>
+                                        </constraints>
+                                        <state key="normal" title="&gt;" backgroundImage="Untitled 2">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextCatTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xb4-zA-BaI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="v4m-a7-L2W"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5YA-B7-7a3" firstAttribute="centerX" secondItem="7do-pz-wEr" secondAttribute="centerX" id="8t5-BG-cT2"/>
+                            <constraint firstItem="7do-pz-wEr" firstAttribute="top" secondItem="5YA-B7-7a3" secondAttribute="bottom" constant="24" id="TZj-2o-pQf"/>
+                            <constraint firstItem="5YA-B7-7a3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V4N-bU-4vY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5YA-B7-7a3" secondAttribute="bottom" constant="89" id="YXX-vO-Aec"/>
+                            <constraint firstItem="7do-pz-wEr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dUn-D9-MkM"/>
+                            <constraint firstItem="5YA-B7-7a3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jwx-eZ-d6s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cool Cats" id="Sod-L7-CjG"/>
+                    <connections>
+                        <outlet property="catImageView" destination="5YA-B7-7a3" id="yG3-01-Dhv"/>
+                        <outlet property="nextButton" destination="5AD-RX-2A6" id="0yd-Fy-ZmR"/>
+                        <outlet property="nextCat" destination="5AD-RX-2A6" id="ssn-dk-5Qp"/>
+                        <outlet property="previousButton" destination="euj-yr-PoA" id="2xg-St-xQQ"/>
+                        <outlet property="saveButtonText" destination="783-hr-Fhg" id="FLN-j5-rCO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="Ojl-ZH-hAh">
+                    <connections>
+                        <action selector="swipeLeft:" destination="BYZ-38-t0r" id="Afd-k2-DmI"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Jt8-tU-FlO">
+                    <connections>
+                        <action selector="swipeRight:" destination="BYZ-38-t0r" id="piz-cf-m3I"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FYt-7V-S51">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uun-1w-UUm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="bxm-ws-CdA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e3p-92-N7a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPF-Vh-I1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Untitled" width="82" height="82"/>
+        <image name="Untitled 2" width="82" height="82"/>
+    </resources>
+</document>
