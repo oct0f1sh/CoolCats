@@ -74,7 +74,7 @@ UINavigationControllerDelegate {
     @IBOutlet weak var catImageView: UIImageView!
 
     func loadCatPic(urlString: String) {
-        catImageView.af_setImage(withURL: URL(string: urlString)!, placeholderImage: #imageLiteral(resourceName: "Loading"))
+        catImageView.af_setImage(withURL: URL(string: urlString)!, placeholderImage: #imageLiteral(resourceName: "Loading Icon v2"))
     }
     
     @IBAction func nextCatTapped(_ sender: Any) {
