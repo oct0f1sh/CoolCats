@@ -130,7 +130,7 @@ UINavigationControllerDelegate {
     }
     
     func getAllCats() {
-        let apiToContact = "https://api.imgur.com/3/gallery/r/cats/\(redditPage)"
+        let apiToContact = "https://api.imgur.com/3/gallery/r/dankmemes/\(redditPage)"
         let parameters = ["Authorization" : "Client-ID \(Constants.ImgurAPI.clientID)"]
         
         Alamofire.request(apiToContact, headers: parameters).validate().responseJSON() { response in
@@ -161,11 +161,21 @@ UINavigationControllerDelegate {
 
     }
     @IBAction func saveButtonTapped(_ sender: Any) {
-        UIImageWriteToSavedPhotosAlbum(self.catImageView.image!, nil, nil, nil)
-        self.currentCat!.isSaved = true
-        let alert = UIAlertController(title: "Nice Cat!", message: "That cool cat has been saved to your camera roll!", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Nice!", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+//        UIImageWriteToSavedPhotosAlbum(self.catImageView.image!, nil, nil, nil)
+//        self.currentCat!.isSaved = true
+//        let alert = UIAlertController(title: "Nice Cat!", message: "That cool cat has been saved to your camera roll!", preferredStyle: UIAlertControllerStyle.alert)
+//        alert.addAction(UIAlertAction(title: "Nice!", style: UIAlertActionStyle.default, handler: nil))
+//        self.present(alert, animated: true, completion: nil)
+        
+        let image = self.catImageView.image!
+        
+        let objectsToShare = [ "Look at this cool cat!" , image ] as [Any]
+        let activityViewController = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        
+        activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.addToReadingList, UIActivityType.openInIBooks]
+        
+        self.present(activityViewController, animated: true, completion: nil)
     }
 }
 
